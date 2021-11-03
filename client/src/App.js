@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import NavBarMenu from './components/menu.js';
 import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import HomePage from './pages/homepage.js';
+import CharacterCreation from './pages/charactercreation.js';
 import useStlyes from './styles.js';
 import './App.css';
 
@@ -37,6 +38,9 @@ function App() {
     <Switch>
       <Route exact path ='/'>
         <HomePage />
+      </Route>
+      <Route path='/pages/charactercreation'>
+        <CharacterCreation />
       </Route>
     </Switch>
   </Box>

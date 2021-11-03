@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
 const roomSchema = mongoose.Schema({
-    name: String,
-    host: String,
+    roomName: String,
+    hostName: String,
 })
 
 const Room = mongoose.model('Room', roomSchema);
