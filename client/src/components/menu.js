@@ -8,6 +8,7 @@ import Divider from '@mui/material/Divider';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import MenuIcon from '@mui/icons-material/Menu';
+import HomeIcon from '@mui/icons-material/Home';
 import { Link } from 'react-router-dom';
 import useStyles from '../styles.js';
 
@@ -86,21 +87,31 @@ export default function CustomizedMenus() {
         open={open}
         onClose={handleClose}
       >
+        <Link to="/" className={classes.link}>
+          <MenuItem onClick={handleClose} disableRipple>
+            <HomeIcon />
+            Home
+          </MenuItem>
+        </Link>
         <Link to="/pages/charactercreation" className={classes.link}>
         <MenuItem onClick={handleClose} disableRipple>
           <AddCircleIcon />
           Create Character
         </MenuItem>
         </Link>
+        <Link to="/pages/roomcreation" className={classes.link}>
         <MenuItem onClick={handleClose} disableRipple>
         <AddCircleIcon />
           Create Room
         </MenuItem>
+        </Link>
         <Divider sx={{ my: 0.5 }} />
+        <Link to="/pages/rooms" className={classes.link}>
         <MenuItem onClick={handleClose} disableRipple>
           <ArticleIcon />
           Open Room
         </MenuItem>
+        </Link>
         <MenuItem onClick={handleClose} disableRipple>
           <MoreHorizIcon />
           Help

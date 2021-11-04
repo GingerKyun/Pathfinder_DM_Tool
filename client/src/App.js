@@ -7,6 +7,9 @@ import NavBarMenu from './components/menu.js';
 import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import HomePage from './pages/homepage.js';
 import CharacterCreation from './pages/charactercreation.js';
+import RoomCreation from './pages/roomCreation.js';
+import ChooseRoom from './pages/chooseRoom.js'
+import RoomDetails from './pages/roomDetails.js';
 import useStlyes from './styles.js';
 import './App.css';
 
@@ -39,8 +42,17 @@ function App() {
       <Route exact path ='/'>
         <HomePage />
       </Route>
-      <Route path='/pages/charactercreation'>
+      <Route exact path='/pages/charactercreation'>
         <CharacterCreation />
+      </Route>
+      <Route exact path='/pages/roomcreation'>
+        <RoomCreation />
+      </Route>
+      <Route exact path='/pages/rooms'>
+        <ChooseRoom />
+      </Route>
+      <Route exact path='/pages/rooms/:id'>
+        <RoomDetails />
       </Route>
     </Switch>
   </Box>
