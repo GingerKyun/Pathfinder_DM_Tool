@@ -20,3 +20,14 @@ export const createRoom = async (req, res) => {
         res.status(409).json({ message: error.message })
     }
 }
+
+export const findRoom = async (req, res) => {
+    const {roomID} = req.params;
+    try {
+        const room = await roomData.findOne({_id: roomID})
+        res.status(200).json(room);
+    } catch (error) {
+        res.status(404).json({ message: error.message })
+    }
+
+}

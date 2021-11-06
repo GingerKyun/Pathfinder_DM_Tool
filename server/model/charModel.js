@@ -1,7 +1,8 @@
 import mongoose from "mongoose";
 
 const charSchema = mongoose.Schema({
-    name: String,
+    playerName: String,
+    characterName: String,
     age: String,
     race: String,
     hp: Number,
